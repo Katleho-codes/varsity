@@ -1,29 +1,33 @@
+@import "./colors";
+
 // Navbar
 .navbar {
-    display: grid;
-    grid-template-columns: 3rem 3rem auto;
+    background-color: $White;
+    display: flex;
     gap: 2rem;
     align-items: center;
-    border: 1px solid;
-    padding: 1rem;
+    padding: 1rem 2rem;
     position: fixed;
     top: 0;
     width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
 }
 
 .logo {
-    border: 1px solid black;
+    fill: $Black;
 }
 
 button.burger_menu {
     background: transparent;
-    border: 1px solid red;
-    // width: 4rem;
-    // height: 4rem;
+    border: none;
+    cursor: pointer;
 
     .burger_icon {
+        cursor: pointer;
         width: 2rem;
         height: 2rem;
+        fill: $Black;
     }
 }
 
@@ -32,85 +36,36 @@ button.burger_menu {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: flex-end;
+    gap: 2rem;
+    justify-content: center;
     list-style-type: none;
-    border: 1px solid red;
+    margin: 0 auto;
+
 }
 
-.menu-items {
-    position: relative;
-    font-size: 14px;
-    border: 1px solid red;
+
+.menu_links {
+    a {
+        color: $Black;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+
 }
 
-.menu-items a {
-    float: left;
-    display: block;
-    text-align: center;
-    // padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.menu-items button {
-    display: flex;
-    align-items: center;
-    color: inherit;
-    font-size: inherit;
+.apply_btn {
+    background-color: #4CAF50;
+    /* Green */
     border: none;
-    background-color: transparent;
-    cursor: pointer;
-    width: 100%;
-}
-
-button span {
-    margin-left: 3px;
-}
-
-.menu-items>a,
-.menu-items button {
-    text-align: left;
-    padding: 0.7rem 1rem;
-}
-
-// .menu-items a:hover,
-// .menu-items button:hover {
-//     background-color: #f2f2f2;
-// }
-
-.arrow::after {
-    content: "";
+    border-radius: 4px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
-    margin-left: 0.28em;
-    vertical-align: 0.09em;
-    border-top: 0.42em solid;
-    border-right: 0.32em solid transparent;
-    border-left: 0.32em solid transparent;
+    font-size: 16px;
+    margin-left: auto;
 }
-
-.dropdown {
-    position: absolute;
-    right: 0;
-    left: auto;
-    box-shadow: 0 10px 15px -3px rgba(46, 41, 51, 0.08),
-        0 4px 6px -2px rgba(71, 63, 79, 0.16);
-    font-size: 0.875rem;
-    // z-index: 9999;
-    min-width: 10rem;
-    padding: 0.5rem 0;
-    list-style-type: none;
-    background-color: #fff;
-    border-radius: 0.5rem;
-    display: none;
-}
-
-.dropdown.show {
-    display: flex;
-}
-
-// .dropdown .dropdown-submenu {
-//     position: absolute;
-//     left: 100%;
-//     top: -7px;
-// }
